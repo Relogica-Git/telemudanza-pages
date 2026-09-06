@@ -1,13 +1,15 @@
-# Fuentes de Telemudanza
+# Fuentes locales de Telemudanza
 
-- El cuerpo usa Inter Variable mediante el paquete local `@fontsource-variable/inter`.
-- Los titulares usan temporalmente Work Sans Variable mediante `@fontsource-variable/work-sans`.
-- La decisión final sigue siendo Söhne Black cuando Eduardo aporte un webfont con licencia de incrustación.
+Aprobadas el 6 de septiembre de 2026: **Inter Variable** para lectura y controles; **Work Sans Variable** para titulares.
 
-Cuando Eduardo aporte el archivo definitivo, colóquese en esta carpeta con el nombre exacto:
+Los dos WOFF2 se conservan en esta carpeta y se sirven desde el dominio propio. No hay peticiones a Google Fonts ni a un CDN.
 
-```text
-public/fonts/soehne-black.woff2
-```
+- inter-latin-variable.woff2: Fontsource @fontsource-variable/inter 5.3.0.
+- work-sans-latin-variable.woff2: Fontsource @fontsource-variable/work-sans 5.3.0.
+- Subconjunto latino, incluidos los caracteres castellanos. Si se amplían alfabetos, añadir el subconjunto necesario sin sustituir silenciosamente estos archivos.
+- Licencias OFL conservadas en Inter-LICENSE.txt y WorkSans-LICENSE.txt.
+- font-display: swap; pesos variables 100–900.
+- npm run check:font verifica ambos binarios.
+- Al reemplazar binarios, usar nombres versionados para evitar cachés obsoletas.
 
-Hasta entonces la versión pública usa Work Sans, servida localmente y sin llamadas a Google Fonts ni CDN. No copiar ni convertir una fuente Söhne instalada en el sistema sin confirmar que su licencia permite incrustación web.
+Söhne no es un requisito ni una dependencia pendiente de esta entrega.
